@@ -5,7 +5,12 @@
     <title>For You Vivi ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="startMusic()">
+<body>
+
+    <!-- Overlay for initial click -->
+    <div id="startOverlay">
+        <div class="startText">Click anywhere</div>
+    </div>
 
     <audio id="bgMusic" loop>
         <source src="music.mp3" type="audio/mpeg">
