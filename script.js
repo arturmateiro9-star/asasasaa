@@ -13,18 +13,18 @@ function changeVolume(value) {
     music.volume = value;
 }
 
-function showLovePage() {
-    document.getElementById("page1").classList.add("hidden");
-    document.getElementById("page2").classList.remove("hidden");
+/* Switch page + tell next page to play music2 */
+function goToLovePage() {
+    localStorage.setItem("playMusic2", "true");
+    window.location.href = "love.html";
 }
 
-/* NO button limited movement */
+/* NO button safe movement */
 function moveButton() {
     let button = document.querySelector(".no-btn");
 
     let maxX = window.innerWidth - button.offsetWidth - 20;
-    let maxY = window.innerHeight - button.offsetHeight - 100; 
-    // 100px safety margin so it never goes under Windows taskbar
+    let maxY = window.innerHeight - button.offsetHeight - 120;
 
     let randomX = Math.floor(Math.random() * maxX);
     let randomY = Math.floor(Math.random() * maxY);
