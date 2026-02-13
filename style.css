@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff4e8a, #ff758c);
+    background: #5B0F1A; /* Dark deep red */
     font-family: Arial, sans-serif;
     overflow: hidden;
     text-align: center;
@@ -27,6 +27,7 @@ h1 {
     transform: rotate(-45deg);
     animation: pulse 1.5s infinite;
     box-shadow: 0 0 40px red;
+    position: relative;
 }
 
 .heart::before,
@@ -83,7 +84,7 @@ button {
 
 .yes-btn {
     background: white;
-    color: #ff4e8a;
+    color: #5B0F1A;
 }
 
 .yes-btn:hover {
@@ -96,11 +97,12 @@ button {
     position: absolute;
 }
 
-/* Volume Slider */
-.volume-control {
-    margin-top: 20px;
-}
-
-input[type="range"] {
-    width: 200px;
+/* Mute Icon */
+.mute-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
 }
