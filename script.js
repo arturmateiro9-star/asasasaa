@@ -1,13 +1,14 @@
-let musicStarted = false;
 let music = document.getElementById("bgMusic");
 
-// Start music automatically when page loads
+// Overlay click → start music
 window.addEventListener("load", () => {
-    if (!musicStarted) {
-        music.volume = 0.02; // 2% volume
+    const overlay = document.getElementById("startOverlay");
+
+    overlay.addEventListener("click", () => {
+        overlay.style.display = "none"; // hide overlay
+        music.volume = 0.005; // 0.5% volume
         music.play();
-        musicStarted = true;
-    }
+    });
 });
 
 function toggleMute() {
@@ -36,4 +37,15 @@ function moveButton() {
     let randomY = Math.floor(Math.random() * maxY);
 
     button.style.left = randomX + "px";
-    button.style.top = randomY
+    button.style.top = randomY + "px";
+}
+
+/* Slideshow (only photo2.jpg) */
+let images = ["photo2.jpg"];
+let index = 0;
+
+setInterval(function () {
+    index++;
+    if (index >= images.length) index = 0;
+    document.getElementById("slide").src = images[index];
+}, 3000);
