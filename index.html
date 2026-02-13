@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You Vivi ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="startMusic()">
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- FIRST PAGE -->
+    <div id="page1" class="page">
+
+        <h1>Will you be my valentine ❤️</h1>
+
+        <div class="heart"></div>
+
+        <div class="slideshow">
+            <img id="slide" src="photo1.jpg">
+        </div>
+
+        <h2> </h2>
+
+        <div class="buttons">
+            <button class="yes-btn" onclick="showLovePage()">YES 💖</button>
+            <button class="no-btn" onmouseover="moveButton()">NO 😏</button>
+        </div>
+
+    </div>
+
+    <!-- SECOND PAGE (Hidden Initially) -->
+    <div id="page2" class="page hidden">
+        <div class="love-message">
+            I love you forever mommy ❤️
+        </div>
+    </div>
+
+    <!-- Volume in corner -->
+    <div class="volume-control">
+        🔊
+        <input type="range" min="0" max="1" step="0.01" value="0.5"
+               oninput="changeVolume(this.value)">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
