@@ -26,12 +26,12 @@
             <button class="yes-btn" onclick="goToLovePage()">YES 💖</button>
             <button class="no-btn" onmouseover="moveButton()">NO 😏</button>
         </div>
-    </div>
 
-    <div class="volume-control">
-        🔊
-        <input type="range" min="0" max="1" step="0.01" value="0.5"
-               oninput="changeVolume(this.value)">
+        <!-- Volume Slider -->
+        <div class="volume-control">
+            <input type="range" min="0" max="1" step="0.01" value="0.5"
+                   oninput="changeVolume(this.value)">
+        </div>
     </div>
 
     <script src="script.js"></script>
