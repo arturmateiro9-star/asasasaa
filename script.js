@@ -1,6 +1,6 @@
 let music = document.getElementById("bgMusic");
 
-// Overlay click → start music + fade overlay
+// Black overlay click → start music + fade overlay
 window.addEventListener("load", () => {
     const overlay = document.getElementById("startOverlay");
 
@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
         overlay.style.opacity = "0";
         setTimeout(() => {
             overlay.style.display = "none"; // remove after fade
-        }, 1000); // match the CSS transition
+        }, 1000); // match CSS transition
     });
 });
 
@@ -31,7 +31,7 @@ function goToLovePage() {
 function moveButton() {
     let button = document.querySelector(".no-btn");
 
-    let safeBottomMargin = 120; // prevent hiding under taskbar
+    let safeBottomMargin = 120;
     let safeSideMargin = 20;
 
     let maxX = window.innerWidth - button.offsetWidth - safeSideMargin;
