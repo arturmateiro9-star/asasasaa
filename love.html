@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>I Love You ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: url("background.jpg") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .message {
+            font-size: 50px;
+            background: rgba(0,0,0,0.6);
+            padding: 40px;
+            border-radius: 20px;
+            text-shadow: 0 0 20px pink;
+        }
+    </style>
+</head>
+<body onclick="startMusic2()">
+
+    <audio id="bgMusic2" loop>
+        <source src="music2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="message">
+        I love you forever mommy ❤️
+    </div>
+
+    <script>
+        function startMusic2() {
+            if (localStorage.getItem("playMusic2") === "true") {
+                document.getElementById("bgMusic2").play();
+                document.getElementById("bgMusic2").volume = 0.5;
+                localStorage.removeItem("playMusic2");
+            }
+        }
+    </script>
+
+</body>
+</html>
