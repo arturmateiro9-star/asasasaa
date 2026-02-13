@@ -32,7 +32,7 @@ function moveButton() {
 }
 
 /* Slideshow */
-let images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+let images = ["photo2.jpg"];
 let index = 0;
 
 setInterval(function () {
@@ -40,3 +40,4 @@ setInterval(function () {
     if (index >= images.length) index = 0;
     document.getElementById("slide").src = images[index];
 }, 3000);
+
