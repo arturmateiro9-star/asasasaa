@@ -1,13 +1,14 @@
 let musicStarted = false;
 let music = document.getElementById("bgMusic");
 
-function startMusic() {
+// Start music automatically when page loads
+window.addEventListener("load", () => {
     if (!musicStarted) {
-        music.volume = 0.2; // start low
+        music.volume = 0.02; // 2% volume
         music.play();
         musicStarted = true;
     }
-}
+});
 
 function toggleMute() {
     music.muted = !music.muted;
@@ -35,15 +36,4 @@ function moveButton() {
     let randomY = Math.floor(Math.random() * maxY);
 
     button.style.left = randomX + "px";
-    button.style.top = randomY + "px";
-}
-
-/* Slideshow (only photo2.jpg) */
-let images = ["photo2.jpg"];
-let index = 0;
-
-setInterval(function () {
-    index++;
-    if (index >= images.length) index = 0;
-    document.getElementById("slide").src = images[index];
-}, 3000);
+    button.style.top = randomY
