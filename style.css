@@ -115,13 +115,14 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0,0,0,0.7);
+    background-color: black; /* everything black */
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: opacity 1s ease; /* smooth fade */
+    opacity: 1;
 }
 
 .startText {
