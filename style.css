@@ -105,4 +105,5 @@ button {
     font-size: 28px;
     cursor: pointer;
     user-select: none;
+    z-index: 1000;
 }
