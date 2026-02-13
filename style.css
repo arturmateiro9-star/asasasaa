@@ -107,3 +107,25 @@ button {
     user-select: none;
     z-index: 1000;
 }
+
+/* Start Overlay */
+#startOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.startText {
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 15px black;
+}
