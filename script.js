@@ -3,7 +3,7 @@ let music = document.getElementById("bgMusic");
 
 function startMusic() {
     if (!musicStarted) {
-        music.volume = 0.2; // start at low volume
+        music.volume = 0.2; // start low
         music.play();
         musicStarted = true;
     }
@@ -21,7 +21,7 @@ function goToLovePage() {
     window.location.href = "love.html";
 }
 
-/* NO button movement */
+/* NO button movement (safe from taskbar) */
 function moveButton() {
     let button = document.querySelector(".no-btn");
 
@@ -38,8 +38,8 @@ function moveButton() {
     button.style.top = randomY + "px";
 }
 
-/* Slideshow */
-let images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+/* Slideshow (only photo2.jpg) */
+let images = ["photo2.jpg"];
 let index = 0;
 
 setInterval(function () {
