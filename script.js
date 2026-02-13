@@ -1,19 +1,23 @@
 let music = document.getElementById("bgMusic");
 
-// Overlay click → start music
+// Overlay click → start music + fade overlay
 window.addEventListener("load", () => {
     const overlay = document.getElementById("startOverlay");
 
     overlay.addEventListener("click", () => {
-        overlay.style.display = "none"; // hide overlay
-        music.volume = 0.005; // 0.5% volume
+        music.volume = 0.009; // 0.5% volume
         music.play();
+
+        // Fade out overlay
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+            overlay.style.display = "none"; // remove after fade
+        }, 1000); // match the CSS transition
     });
 });
 
 function toggleMute() {
     music.muted = !music.muted;
-
     let icon = document.querySelector(".mute-control");
     icon.textContent = music.muted ? "🔇" : "🔊";
 }
