@@ -3,26 +3,33 @@ let music = document.getElementById("bgMusic");
 
 function startMusic() {
     if (!musicStarted) {
+        music.volume = 0.2; // start at low volume
         music.play();
-        music.volume = 0.5;
         musicStarted = true;
     }
 }
 
-function changeVolume(value) {
-    music.volume = value;
+function toggleMute() {
+    music.muted = !music.muted;
+
+    let icon = document.querySelector(".mute-control");
+    icon.textContent = music.muted ? "🔇" : "🔊";
 }
 
+/* YES button → new page */
 function goToLovePage() {
     window.location.href = "love.html";
 }
 
-/* NO button runs across entire page */
+/* NO button movement */
 function moveButton() {
     let button = document.querySelector(".no-btn");
 
-    let maxX = window.innerWidth - button.offsetWidth;
-    let maxY = window.innerHeight - button.offsetHeight;
+    let safeBottomMargin = 120; // prevent hiding under taskbar
+    let safeSideMargin = 20;
+
+    let maxX = window.innerWidth - button.offsetWidth - safeSideMargin;
+    let maxY = window.innerHeight - button.offsetHeight - safeBottomMargin;
 
     let randomX = Math.floor(Math.random() * maxX);
     let randomY = Math.floor(Math.random() * maxY);
@@ -32,7 +39,7 @@ function moveButton() {
 }
 
 /* Slideshow */
-let images = ["photo2.jpg"];
+let images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
 let index = 0;
 
 setInterval(function () {
@@ -40,4 +47,3 @@ setInterval(function () {
     if (index >= images.length) index = 0;
     document.getElementById("slide").src = images[index];
 }, 3000);
-
