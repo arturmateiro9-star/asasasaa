@@ -108,25 +108,24 @@ button {
     z-index: 1000;
 }
 
-/* Start Overlay */
+/* Black overlay for click start */
 #startOverlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* everything black */
+    background-color: black; /* full black screen */
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: opacity 1s ease; /* smooth fade */
+    transition: opacity 1s ease;
     opacity: 1;
 }
 
 .startText {
     font-size: 40px;
     color: white;
-    text-shadow: 0 0 15px black;
 }
